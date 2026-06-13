@@ -1,0 +1,18 @@
+# === Pliki robocze / narzędzia (NIE część strony) ===
+_*
+*.bak
+*.pyc
+__pycache__/
+.playwright-mcp/
+0001-*.png
+
+# === Duże foldery robocze (backupy / wersje pośrednie - nie deployujemy) ===
+assets/images-original-backup/
+assets/images-ai-upscaled/
+assets/images-final/
+assets/_images-site-backup-pre-AI/
+whatsuppliki/
+
+# === System ===
+.DS_Store
+Thumbs.db
