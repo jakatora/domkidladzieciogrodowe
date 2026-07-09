@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Reveal on scroll
   const revealTargets = [
     '.hero-card', '.home-model-card', '.gallery-top', '.gallery-tile', '.model-detail-card',
-    '.masonry-item', '.exec-intro', '.exec-band-grid', '.spec-section', '.contact-card-main', '.info-box', '.footer-grid > *'
+    '.masonry-item', '.exec-intro', '.exec-band-grid', '.spec-section', '.contact-card-main', '.info-box', '.footer-grid > *',
+    '.review-card'
   ].flatMap(sel => [...document.querySelectorAll(sel)]);
 
   revealTargets.forEach((el, idx) => {
