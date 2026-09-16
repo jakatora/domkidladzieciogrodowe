@@ -946,3 +946,7 @@ h1,h2,.section-title,.center-head h1{text-wrap:balance}
 .review-card footer{font-size:13px;font-weight:700;color:var(--text)}
 .review-card footer span{display:block;font-weight:500;font-size:11.5px;color:var(--muted);margin-top:2px}
 @media (max-width:760px){.reviews-grid{grid-template-columns:1fr}}
+
+/* Podstrona Domki dla dzieci ogrodowe (2026-09-16) */
+.domki-text { max-width: 780px; }
+.domki-text p + p { margin-top: 16px; }
