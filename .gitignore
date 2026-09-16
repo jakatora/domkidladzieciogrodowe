@@ -16,3 +16,6 @@ whatsuppliki/
 # === System ===
 .DS_Store
 Thumbs.db
+
+# Cloudflare Pages: plik reguł przekierowań (zaczyna się od _)
+!_redirects
