@@ -19,3 +19,6 @@ Thumbs.db
 
 # Cloudflare Pages: plik reguł przekierowań (zaczyna się od _)
 !_redirects
+
+# Zasady dla ATLAS-a i asystentów AI (lokalne, nie publikować)
+AGENTS.md
