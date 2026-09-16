@@ -1,0 +1,9 @@
+# Adresy z ukośnikiem i /index.html -> jeden adres kanoniczny (bez duplikatów w Google)
+/modele/ /modele 301
+/modele/index.html /modele 301
+/realizacje/ /realizacje 301
+/realizacje/index.html /realizacje 301
+/wykonanie/ /wykonanie 301
+/wykonanie/index.html /wykonanie 301
+/kontakt/ /kontakt 301
+/kontakt/index.html /kontakt 301
