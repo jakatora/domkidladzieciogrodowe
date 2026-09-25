@@ -137,9 +137,17 @@ img { image-rendering: auto; }
 .v2-hero__meta span { display: inline-flex; align-items: center; gap: 8px; }
 .v2-hero__meta svg { width: 16px; height: 16px; color: #E2B488; }
 .v2-hero__meta a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(248,246,241,.4); }
+/* desktop: zdjęcie po prawej, tekst na zielonym panelu – domek nie chowa się pod nagłówkiem */
+@media (min-width: 900px) {
+  .v2-hero__img { left: 44%; width: 56%; object-position: 18% 40%; }
+  .v2-hero::before { background: linear-gradient(90deg, var(--forest) 0%, var(--forest) 44%, rgba(24,53,42,.5) 46.5%, rgba(24,53,42,0) 51%); }
+  .v2-hero h1 { text-shadow: none; font-size: clamp(2.3rem, 3.7vw, 3.7rem); max-width: 14ch; }
+  .v2-hero__lead { max-width: 38ch; }
+  .v2-hero__meta { max-width: 40%; }
+}
 @media (max-width: 640px) {
   .v2-hero { min-height: 88svh; }
-  .v2-hero__img { object-position: 44% 30%; }
+  .v2-hero__img { object-position: 18% 30%; }
   .v2-hero::before { background: linear-gradient(to top, rgba(10,24,18,.92) 0%, rgba(10,24,18,.8) 45%, rgba(10,24,18,.6) 66%, rgba(10,24,18,.3) 82%, rgba(10,24,18,0) 97%); }
   .v2-hero h1 { text-shadow: 0 2px 18px rgba(6,16,11,.6); }
   .v2-hero__body { padding: 120px 0 36px; }
@@ -433,3 +441,29 @@ a.v2-contact__phone { display: inline-flex; align-items: center; gap: 12px; font
 
 /* kotwice (np. /kontakt#zapytanie) nie chowają się pod przyklejonym nagłówkiem */
 html { scroll-padding-top: 96px; }
+
+/* ─── Zespół / O nas ────────────────────────────────────────── */
+.v2-lead { font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.65; color: var(--ink-2); max-width: 54ch; margin: 20px 0 0; }
+.v2-team { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; align-items: center; }
+.v2-team h2 { font-size: clamp(1.85rem, 3.3vw, 2.75rem); font-weight: 800; line-height: 1.1; letter-spacing: -.025em; margin: 0 0 18px; max-width: 18ch; text-wrap: balance; }
+.v2-team p { font-size: 17px; line-height: 1.7; color: var(--ink-2); margin: 0 0 14px; max-width: 54ch; }
+.v2-team__img { margin: 0; }
+.v2-team__img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); display: block; }
+.v2-quality--3 { grid-template-columns: repeat(3, 1fr); }
+.v2-quality--3 img { aspect-ratio: 4 / 3; margin-bottom: 0; }
+.v2-legal h2 { font-size: 22px; margin: 36px 0 12px; }
+.v2-legal p { font-size: 16px; }
+@media (max-width: 900px) { .v2-team { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .v2-quality--3 { grid-template-columns: 1fr; } }
+.v2-section--rule { border-top: 1px solid var(--rule); }
+
+/* telefon i tablet: zdjęcie nad tekstem, bez przyciemniania – domek widać w całości */
+@media (max-width: 899px) {
+  .v2-hero { display: flex; flex-direction: column; align-items: stretch; min-height: 0; }
+  .v2-hero__img { position: relative; inset: auto; z-index: 0; width: 100%; height: min(66vw, 460px); object-position: 30% 50%; }
+  .v2-hero::before { display: none; }
+  .v2-hero__body { padding: 28px 0 36px; }
+  .v2-hero h1 { text-shadow: none; }
+}
+.v2-team .v2-lead { margin-top: 20px; }
+.v2-legal h1 { margin-bottom: 18px; }
