@@ -45,6 +45,11 @@
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-07.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://domkidladzieciogrodowe.pl/model-standard</loc>
@@ -287,5 +292,81 @@
     <loc>https://domkidladzieciogrodowe.pl/polityka-prywatnosci</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/plac-zabaw-do-malego-ogrodu</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/plac-zabaw-dla-dwojga-dzieci</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xl-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-premium-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/gdzie-postawic-plac-zabaw-w-ogrodzie</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/jak-dbac-o-drewniany-plac-zabaw</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-021.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/domek-na-podwyzszeniu-czy-przy-ziemi</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-077.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xl-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://domkidladzieciogrodowe.pl/poradnik/bezpieczny-plac-zabaw-w-ogrodzie</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-076.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-premium-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-058.webp</image:loc></image:image>
   </url>
 </urlset>
