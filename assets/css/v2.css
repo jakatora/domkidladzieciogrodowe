@@ -369,3 +369,13 @@ img { image-rendering: auto; }
 
 /* nagłówki dziedziczące biały kolor z ciemnych kart (v2.css nadpisuje h1-h4 domyślnie) */
 .contact-card-main h2, .contact-card-main small { color: var(--paper); }
+
+/* ─── Poradniki na stronie głównej ("Zanim wybierzesz") ─────── */
+.v2-guides { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.v2-guides a { display: block; background: var(--white); border-radius: var(--r-md); padding: 24px 22px; text-decoration: none; transition: box-shadow .18s ease; }
+.v2-guides a:hover { box-shadow: var(--shadow-md); }
+.v2-guides h3 { font-size: 17px; font-weight: 700; margin: 0 0 8px; letter-spacing: -.01em; }
+.v2-guides p { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 14px; }
+.v2-guides span { font-size: 14px; font-weight: 600; color: var(--caramel-ink); }
+@media (max-width: 1000px) { .v2-guides { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .v2-guides { grid-template-columns: 1fr; } }
