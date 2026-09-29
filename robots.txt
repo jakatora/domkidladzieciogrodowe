@@ -1,4 +1,14 @@
+# Strona firmy Rob Drew – drewniane place zabaw i domki dla dzieci do ogrodu
 User-agent: *
+Allow: /
+
+# Wyszukiwarki i asystenci AI, którzy cytują strony z linkiem (ChatGPT, Claude, Perplexity)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
 Allow: /
 
 Sitemap: https://domkidladzieciogrodowe.pl/sitemap.xml
