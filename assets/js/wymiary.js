@@ -67,10 +67,15 @@
     var m = MODELE[key];
     var fw, fh, lab;
     if (m.zestaw) {
-      // ustaw dłuższy bok zestawu wzdłuż dłuższego boku ogrodu
-      var along = L >= W;
-      fw = along ? 7 : 5; fh = along ? 5 : 7; lab = 'zestaw ' + m.name + ' 5 × 7 m';
+      // najpierw ułożenie, w którym zestaw się mieści; gdy żadne – dłuższy bok wzdłuż dłuższego boku miejsca
+      var a = [m.zestaw[0], m.zestaw[1]], b = [m.zestaw[1], m.zestaw[0]];
+      var fitA = a[0] <= L && a[1] <= W, fitB = b[0] <= L && b[1] <= W;
+      var o = fitA ? a : fitB ? b : (L >= W ? a : b);
+      fw = o[0]; fh = o[1]; lab = 'zestaw ' + m.name + ' 5 × 7 m';
     } else { fw = DOMEK; fh = DOMEK; lab = 'domek z tarasem 1,8 × 1,8 m'; }
+    // odsunięcie od krawędzi maks. 0,3 m, ale nigdy tak, by zestaw, który się mieści, wystawał poza miejsce;
+    // gdy bok się nie mieści – zestaw zaczyna się przy krawędzi i widać, o ile wystaje
+    var offX = Math.max(0, Math.min(0.3, L - fw)), offY = Math.max(0, Math.min(0.3, W - fh));
     var pad = 1.4, totW = Math.max(L, fw) + pad * 2, totH = Math.max(W, fh) + pad * 2;
     var s = 520 / Math.max(totW, totH * 1.35), vw = totW * s, vh = totH * s;
     var svg = svgEl('svg', { viewBox: '0 0 ' + vw.toFixed(1) + ' ' + vh.toFixed(1), class: 'rd-rzut__svg', role: 'img',
@@ -81,11 +86,11 @@
     for (var y = 0; y <= Math.floor(W); y++) g.appendChild(svgEl('line', { x1: ox, y1: oy + y * s, x2: ox + L * s, y2: oy + y * s }));
     svg.appendChild(svgEl('rect', { x: ox, y: oy, width: L * s, height: W * s, class: 'rd-rzut__ogrod' }));
     svg.appendChild(g);
-    svg.appendChild(svgEl('rect', { x: ox + 0.3 * s, y: oy + 0.3 * s, width: fw * s, height: fh * s,
-      class: 'rd-rzut__zestaw rd-rzut__zestaw--' + stan }));
+    svg.appendChild(svgEl('rect', { x: ox + offX * s, y: oy + offY * s, width: fw * s, height: fh * s,
+      class: 'rd-rzut__zestaw rd-rzut__zestaw--' + stan, 'data-x-m': offX, 'data-y-m': offY, 'data-w-m': fw, 'data-h-m': fh }));
     // etykieta w środku zestawu, a gdy się nie mieści – pod nim
     var wnetrze = fw * s > lab.length * 7.2 + 12;
-    svg.appendChild(svgEl('text', { x: ox + 0.3 * s + (wnetrze ? 6 : 0), y: oy + 0.3 * s + (wnetrze ? 16 : fh * s + 16), class: 'rd-rzut__etykieta' }, lab));
+    svg.appendChild(svgEl('text', { x: ox + offX * s + (wnetrze ? 6 : 0), y: oy + offY * s + (wnetrze ? 16 : fh * s + 16), class: 'rd-rzut__etykieta' }, lab));
     svg.appendChild(svgEl('text', { x: ox + L * s / 2, y: oy - 10, 'text-anchor': 'middle', class: 'rd-rzut__wymiar' }, fmt(L) + ' m'));
     svg.appendChild(svgEl('text', { x: ox - 10, y: oy + W * s / 2, 'text-anchor': 'middle', class: 'rd-rzut__wymiar',
       transform: 'rotate(-90 ' + (ox - 10) + ' ' + (oy + W * s / 2) + ')' }, fmt(W) + ' m'));

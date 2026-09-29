@@ -3,28 +3,45 @@
    Parametry: strona (ścieżka bez zapytania), miejsce (część strony), model, wynik. Nigdy: imię, telefon,
    treść formularza ani identyfikator użytkownika. Kliknięcie = zamiar kontaktu, nie wysłana wiadomość.
 
-   ODBIORNIK: domyślnie BRAK – skrypt niczego nie wysyła. Zdarzenia pójdą dopiero, gdy:
-   - na stronie działa Cloudflare Zaraz (window.zaraz.track), albo
-   - w <head> jest <meta name="rd-pomiar-endpoint" content="https://…"> (POST JSON przez sendBeacon).
+   ODBIORNIK: Cloudflare Zaraz (zaraz.track → Zaraz Monitoring, API zarazTrackAdaptiveGroups grupuje po trackName
+   i urlPath, nie po właściwościach) – dlatego model/miejsce/wynik są zakodowane w nazwie zdarzenia z zamkniętej listy,
+   np. „kontakt_whatsapp_klik__karta_modelu__xl”. Skrypt Zaraz (/cdn-cgi/zaraz/i.js) ładujemy ręcznie tylko stąd.
+   WYŁĄCZONE (WLACZONY = false): na koncie Zaraz działa wyłącznie z włączonym Monitoringiem, który ustawia ciasteczka
+   identyfikujące (cf_zaraz_client, cfz_zaraz-analytics) – to łamie założenie „bez ciasteczek”. Szczegóły w raporcie.
    Poza domeną produkcyjną nic nie jest wysyłane; z ?pomiar-test zdarzenia trafiają tylko do window.__rdPomiarTest. */
 (function () {
   'use strict';
+  var WLACZONY = false;
   var PROD = /(^|\.)domkidladzieciogrodowe\.pl$/.test(location.hostname);
   var TEST = /[?&]pomiar-test(=|&|$)/.test(location.search);
-  if (!PROD && !TEST) return;
-  var meta = document.querySelector('meta[name="rd-pomiar-endpoint"]');
-  var ENDPOINT = meta && /^https:\/\//.test(meta.content) ? meta.content : '';
+  if (!TEST && !(PROD && WLACZONY)) return;
   var MODELE = ['standard', 'komfort', 'xxl', 'xl', 'premium'];
+  var MIEJSCA = ['pasek_mobilny', 'naglowek', 'stopka', 'hero', 'kreator', 'kreator_wynik', 'karta_modelu', 'kontakt',
+    'sekcja_koncowa', 'formularz', 'wymiary_wynik', 'tresc'];
+  var WYNIKI = ['nie_miesci', 'do_potwierdzenia', 'brak_danych', 'blad'];
   if (TEST) window.__rdPomiarTest = window.__rdPomiarTest || [];
 
+  var kolejka = [], zaladowany = false;
+  function zaraz() {
+    if (zaladowany) return; zaladowany = true;
+    var s = document.createElement('script');
+    s.src = '/cdn-cgi/zaraz/i.js'; s.referrerPolicy = 'origin'; s.async = true;
+    s.onload = function () { while (kolejka.length && window.zaraz) window.zaraz.track(kolejka.shift()); };
+    document.head.appendChild(s);
+  }
+  // nazwa zdarzenia tylko z zamkniętych list – nic spoza nich nie trafi do statystyk
+  function nazwa(name, props) {
+    var czesci = [name];
+    if (props.miejsce) czesci.push(MIEJSCA.indexOf(props.miejsce) > -1 ? props.miejsce : 'tresc');
+    if (name !== 'kreator_start') czesci.push(MODELE.indexOf(props.model) > -1 ? props.model : 'brak');
+    if (props.wynik) czesci.push(WYNIKI.indexOf(props.wynik) > -1 ? props.wynik : 'blad');
+    return czesci.join('__');
+  }
   function send(name, props) {
-    var data = { strona: location.pathname };
-    for (var k in props) if (props[k]) data[k] = String(props[k]).slice(0, 40);
-    if (TEST) { window.__rdPomiarTest.push({ event: name, props: data }); return; }
-    if (window.zaraz && typeof window.zaraz.track === 'function') { window.zaraz.track(name, data); return; }
-    if (ENDPOINT && navigator.sendBeacon) {
-      navigator.sendBeacon(ENDPOINT, new Blob([JSON.stringify({ event: name, props: data })], { type: 'application/json' }));
-    }
+    var n = nazwa(name, props);
+    if (TEST) { window.__rdPomiarTest.push({ event: name, trackName: n, props: props }); return; }
+    if (window.zaraz && typeof window.zaraz.track === 'function') { window.zaraz.track(n); return; }
+    kolejka.push(n); zaraz();
   }
 
   function modelZ(t) {
