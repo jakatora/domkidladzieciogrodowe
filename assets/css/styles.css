@@ -1024,3 +1024,84 @@ h1,h2,.section-title,.center-head h1{text-wrap:balance}
 @media (min-width:761px){.info-table tbody th{width:160px}}
 .contact-grid .adres-box{grid-column:1/-1}
 @media (max-width:760px){.info-table td::before{flex-basis:110px}}
+
+/* === Naturalne drewno w ogrodzie (2026-09-29) ===
+   Zieleń lasu + ciepła jasna baza + mały miodowy akcent.
+   v2.css ładuje się po tym pliku, dlatego reguły mają prefiks body.v2. */
+:root{--honey:#C8923F;--honey-soft:#F5E9D6;--honey-line:#E6CFA8}
+
+/* hero: wstęp z marką nad nagłówkiem właściciela */
+body.v2 .v2-hero__kicker{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 15px/1.45 var(--font-sans);color:#EBCB9C;max-width:44ch}
+body.v2 .v2-hero__kicker::before{content:"";flex:0 0 28px;height:3px;border-radius:2px;background:var(--honey)}
+body.v2 .v2-hero h1{font-size:clamp(2.1rem,8.2vw,2.7rem);line-height:1.07;max-width:17ch;letter-spacing:-.028em}
+@media (min-width:900px){
+  body.v2 .v2-hero h1{font-size:clamp(2.4rem,3.4vw,3.45rem);max-width:16ch}
+  body.v2 .v2-hero__body{padding-bottom:72px}
+}
+
+/* realizacje na stronie głównej: bez pustego pola w ostatnim rzędzie */
+@media (min-width:901px){body.v2 .v2-mosaic .v2-tile:nth-child(7){grid-column:span 2}}
+
+/* karty modeli: dwa pierwsze szerzej, trzy niżej – bez dziury w siatce */
+body.v2 .v2-price{background:var(--honey-soft);color:var(--caramel-ink);padding:5px 12px;border-radius:999px;font-size:17px;line-height:1.2}
+body.v2 .v2-card__top{align-items:center;margin-bottom:8px}
+@media (min-width:1100px){
+  body.v2 .v2-cards{grid-template-columns:repeat(6,minmax(0,1fr));gap:52px 32px}
+  body.v2 .v2-cards>.v2-card{grid-column:span 2}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2){grid-column:span 3}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2) .v2-card__img{aspect-ratio:3/2}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2) h3{font-size:28px}
+}
+@media (min-width:641px) and (max-width:1099px){
+  body.v2 .v2-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.v2 .v2-cards>.v2-card:nth-child(5):last-child{grid-column:1/-1}
+  body.v2 .v2-cards>.v2-card:nth-child(5):last-child .v2-card__img{aspect-ratio:16/8}
+}
+
+/* tabele porównania i cennika: spokojniej i czytelniej */
+body.v2 .compare-table{font-size:15px;border:1px solid var(--rule);border-radius:var(--r-md)}
+body.v2 .compare-table th,body.v2 .compare-table td{padding:16px 18px;line-height:1.55}
+body.v2 .compare-table thead th{font-size:13px;letter-spacing:.01em;text-transform:none;font-weight:700;color:var(--ink-2)}
+body.v2 .compare-table tbody th{font-size:18px}
+body.v2 .compare-table td{color:var(--ink-2)}
+body.v2 .compare-table .price-cell{font-family:var(--font-serif);font-size:17px;font-weight:800;color:var(--caramel-ink)}
+body.v2 .compare-table tbody tr:not(.is-current):hover th,body.v2 .compare-table tbody tr:not(.is-current):hover td{background:#FCFBF8}
+@media (max-width:760px){
+  body.v2 .compare-table th,body.v2 .compare-table td{padding:4px 16px}
+  body.v2 .compare-table tbody th{padding:16px 16px 6px}
+  body.v2 .compare-table tbody tr td:last-child{padding-bottom:16px}
+}
+
+/* strona modelu: co jest w cenie, dane w pasach, miniatury na telefonie w jednym rzędzie */
+body.v2 .v2-product__incl{margin:0 0 22px;padding:14px 16px;border-left:3px solid var(--honey);border-radius:0 10px 10px 0;background:var(--honey-soft);font-size:15px;line-height:1.6;color:var(--ink)}
+body.v2 .v2-product__incl strong{font-weight:700}
+body.v2 .model-facts .spec-table tr:nth-child(even) td{background:#FBF9F4}
+body.v2 .model-facts .spec-table td:first-child{font-weight:600;color:var(--ink)}
+body.v2 .model-facts .spec-table td{color:var(--ink-2)}
+@media (max-width:960px){
+  body.v2 .v2-product{grid-template-columns:minmax(0,1fr)}
+  body.v2 .v2-product>*{min-width:0}
+  body.v2 .v2-product .model-thumb-grid{display:flex;overflow-x:auto;gap:8px;padding:2px 2px 8px;scroll-snap-type:x proximity;scrollbar-width:thin}
+  body.v2 .v2-product .model-thumb{flex:0 0 76px;aspect-ratio:1/1;scroll-snap-align:start}
+}
+
+/* O nas: dane firmy w jednym miejscu */
+body.v2 .v2-idcard{margin:28px 0 0;padding:0;max-width:640px;border-top:1px solid var(--rule)}
+body.v2 .v2-idcard>div{display:grid;grid-template-columns:180px 1fr;gap:4px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+body.v2 .v2-idcard dt{font-size:14px;font-weight:600;color:var(--ink-3)}
+body.v2 .v2-idcard dd{margin:0;font-size:16px;color:var(--ink)}
+body.v2 .v2-idcard a{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:560px){body.v2 .v2-idcard>div{grid-template-columns:1fr}}
+
+/* stopka: link do wizytówki Google */
+body.v2 .v2-footer__gbp{display:inline-block;padding:6px 0;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(248,246,241,.4)}
+
+/* telefon: pasek kontaktu nie zasłania otwartego menu ani fokusu na dole ekranu */
+body.v2.menu-open .mobile-cta-bar{display:none}
+@media (max-width:960px){html{scroll-padding-bottom:104px}}
+@media (prefers-reduced-motion:reduce){body.v2 .v2-card__img img,body.v2 .v2-mosaic img{transition:none}}
+body.v2 .v2-product__info>.v2-checks{margin-bottom:6px}
+@media (min-width:961px){body.v2 .v2-product__info>.v2-checks{grid-template-columns:1fr 1fr;column-gap:20px}}
+body.v2 .v2-product__info>.v2-checks+.v2-product__price{border-bottom:0;margin-bottom:6px}
+/* główne zdjęcie modelu to <button> (inline-block): bez pełnej szerokości aspect-ratio nie rezerwował miejsca i treść skakała (CLS ~0,3) */
+body.v2 .model-gallery-main{display:block;width:100%}
