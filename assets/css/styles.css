@@ -1105,3 +1105,48 @@ body.v2 .v2-product__info>.v2-checks{margin-bottom:6px}
 body.v2 .v2-product__info>.v2-checks+.v2-product__price{border-bottom:0;margin-bottom:6px}
 /* główne zdjęcie modelu to <button> (inline-block): bez pełnej szerokości aspect-ratio nie rezerwował miejsca i treść skakała (CLS ~0,3) */
 body.v2 .model-gallery-main{display:block;width:100%}
+
+/* === Etap 4 (2026-09-29): wymiary ogrodu, filmy, opinie === */
+.rd-wymiary__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px 56px;align-items:start}
+.rd-wymiary__lead{font-size:17px;line-height:1.65;color:var(--ink-2);margin:14px 0 10px;max-width:52ch}
+.rd-wymiary__note{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:0 0 22px;padding:12px 14px;border-left:3px solid var(--honey);background:var(--honey-soft);border-radius:0 10px 10px 0;max-width:56ch}
+.rd-wymiary__form{display:grid;gap:16px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-md);padding:22px}
+.rd-wymiary__pola{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rd-wymiary__form label{display:grid;gap:6px;font-size:14px;font-weight:600;color:var(--ink)}
+.rd-wymiary__form input,.rd-wymiary__form select{font:400 16px/1.4 var(--font-sans);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;min-height:48px;width:100%;box-sizing:border-box}
+.rd-wymiary__form [aria-invalid="true"]{border-color:#A3402A;box-shadow:0 0 0 1px #A3402A}
+.rd-wymiary__form .v2-btn{justify-self:start}
+.rd-wymiary__blad{margin:0;font-size:14.5px;font-weight:600;color:#A3402A}
+.rd-wymiary__wynik:empty{display:none}
+.rd-wynik{border-radius:var(--r-md);padding:18px 20px;margin-bottom:16px;border:1px solid var(--rule);background:var(--white)}
+.rd-wynik--nie_miesci{border-left:4px solid #A3402A}
+.rd-wynik--do_potwierdzenia,.rd-wynik--brak_danych{border-left:4px solid var(--honey)}
+.rd-wynik p{margin:0 0 10px;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+.rd-wynik .rd-wynik__tytul{font-family:var(--font-serif);font-size:19px;font-weight:800;line-height:1.3;color:var(--ink)}
+.rd-wynik .rd-wynik__sub{margin:12px 0 6px;font-weight:600;color:var(--ink)}
+.rd-wynik__znane{margin:0;padding-left:20px;font-size:15px;line-height:1.6;color:var(--ink-2)}
+.rd-rzut{margin:0 0 16px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-md);padding:12px}
+.rd-rzut__svg{display:block;width:100%;height:auto;max-height:440px}
+.rd-rzut figcaption{font-size:13.5px;line-height:1.5;color:var(--ink-3);margin-top:8px}
+.rd-rzut__ogrod{fill:#E7EDE8;stroke:#18352A;stroke-width:2}
+.rd-rzut__siatka line{stroke:#18352A;stroke-opacity:.12;stroke-width:1}
+.rd-rzut__zestaw{fill:#C8923F;fill-opacity:.28;stroke:#8A5A2E;stroke-width:2}
+.rd-rzut__zestaw--nie_miesci{fill:#A3402A;fill-opacity:.18;stroke:#A3402A;stroke-dasharray:6 4}
+.rd-rzut__etykieta{font:600 13px/1 Inter,sans-serif;fill:#222}
+.rd-rzut__wymiar{font:700 14px/1 Manrope,sans-serif;fill:#18352A}
+.rd-rzut__skala{font:500 12px/1 Inter,sans-serif;fill:#77716A}
+.rd-wynik__cta{display:flex;flex-wrap:wrap;gap:12px}
+.rd-dobor-wymiary{margin:-12px 0 24px;font-size:16px}
+@media (max-width:900px){.rd-wymiary__grid{grid-template-columns:1fr}}
+@media (max-width:560px){.rd-wymiary__pola{grid-template-columns:1fr}.rd-wymiary__form .v2-btn,.rd-wynik__cta .v2-btn{width:100%}}
+
+.rd-filmy__grid{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:28px}
+.rd-film{margin:0}
+.rd-film video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r-md);background:var(--sand)}
+.rd-film figcaption{font-size:14.5px;line-height:1.55;color:var(--ink-2);margin-top:10px}
+.rd-film figcaption strong{color:var(--ink)}
+@media (max-width:640px){.rd-filmy__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+
+.rd-opinie__box{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:24px 48px;align-items:center}
+.rd-opinie p{font-size:17px;line-height:1.65;color:var(--ink-2);margin:14px 0 0;max-width:60ch}
+@media (max-width:800px){.rd-opinie__box{grid-template-columns:1fr}.rd-opinie .v2-btn{width:100%;white-space:normal;text-align:center}}
