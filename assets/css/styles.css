@@ -1024,3 +1024,141 @@ h1,h2,.section-title,.center-head h1{text-wrap:balance}
 @media (min-width:761px){.info-table tbody th{width:160px}}
 .contact-grid .adres-box{grid-column:1/-1}
 @media (max-width:760px){.info-table td::before{flex-basis:110px}}
+
+/* === Naturalne drewno w ogrodzie (2026-09-29) ===
+   Zieleń lasu + ciepła jasna baza + mały miodowy akcent.
+   v2.css ładuje się po tym pliku, dlatego reguły mają prefiks body.v2. */
+:root{--honey:#C8923F;--honey-soft:#F5E9D6;--honey-line:#E6CFA8}
+
+/* hero: wstęp z marką nad nagłówkiem właściciela */
+body.v2 .v2-hero__kicker{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 15px/1.45 var(--font-sans);color:#EBCB9C;max-width:44ch}
+body.v2 .v2-hero__kicker::before{content:"";flex:0 0 28px;height:3px;border-radius:2px;background:var(--honey)}
+body.v2 .v2-hero h1{font-size:clamp(2.1rem,8.2vw,2.7rem);line-height:1.07;max-width:17ch;letter-spacing:-.028em}
+@media (min-width:900px){
+  body.v2 .v2-hero h1{font-size:clamp(2.4rem,3.4vw,3.45rem);max-width:16ch}
+  body.v2 .v2-hero__body{padding-bottom:72px}
+}
+
+/* realizacje na stronie głównej: bez pustego pola w ostatnim rzędzie */
+@media (min-width:901px){body.v2 .v2-mosaic .v2-tile:nth-child(7){grid-column:span 2}}
+
+/* karty modeli: dwa pierwsze szerzej, trzy niżej – bez dziury w siatce */
+body.v2 .v2-price{background:var(--honey-soft);color:var(--caramel-ink);padding:5px 12px;border-radius:999px;font-size:17px;line-height:1.2}
+body.v2 .v2-card__top{align-items:center;margin-bottom:8px}
+@media (min-width:1100px){
+  body.v2 .v2-cards{grid-template-columns:repeat(6,minmax(0,1fr));gap:52px 32px}
+  body.v2 .v2-cards>.v2-card{grid-column:span 2}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2){grid-column:span 3}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2) .v2-card__img{aspect-ratio:3/2}
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2) h3{font-size:28px}
+}
+@media (min-width:641px) and (max-width:1099px){
+  body.v2 .v2-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.v2 .v2-cards>.v2-card:nth-child(5):last-child{grid-column:1/-1}
+  body.v2 .v2-cards>.v2-card:nth-child(5):last-child .v2-card__img{aspect-ratio:16/8}
+}
+
+/* tabele porównania i cennika: spokojniej i czytelniej */
+body.v2 .compare-table{font-size:15px;border:1px solid var(--rule);border-radius:var(--r-md)}
+body.v2 .compare-table th,body.v2 .compare-table td{padding:16px 18px;line-height:1.55}
+body.v2 .compare-table thead th{font-size:13px;letter-spacing:.01em;text-transform:none;font-weight:700;color:var(--ink-2)}
+body.v2 .compare-table tbody th{font-size:18px}
+body.v2 .compare-table td{color:var(--ink-2)}
+body.v2 .compare-table .price-cell{font-family:var(--font-serif);font-size:17px;font-weight:800;color:var(--caramel-ink)}
+body.v2 .compare-table tbody tr:not(.is-current):hover th,body.v2 .compare-table tbody tr:not(.is-current):hover td{background:#FCFBF8}
+@media (max-width:760px){
+  body.v2 .compare-table th,body.v2 .compare-table td{padding:4px 16px}
+  body.v2 .compare-table tbody th{padding:16px 16px 6px}
+  body.v2 .compare-table tbody tr td:last-child{padding-bottom:16px}
+}
+
+/* strona modelu: co jest w cenie, dane w pasach, miniatury na telefonie w jednym rzędzie */
+body.v2 .v2-product__incl{margin:0 0 22px;padding:14px 16px;border-left:3px solid var(--honey);border-radius:0 10px 10px 0;background:var(--honey-soft);font-size:15px;line-height:1.6;color:var(--ink)}
+body.v2 .v2-product__incl strong{font-weight:700}
+body.v2 .model-facts .spec-table tr:nth-child(even) td{background:#FBF9F4}
+body.v2 .model-facts .spec-table td:first-child{font-weight:600;color:var(--ink)}
+body.v2 .model-facts .spec-table td{color:var(--ink-2)}
+@media (max-width:960px){
+  body.v2 .v2-product{grid-template-columns:minmax(0,1fr)}
+  body.v2 .v2-product>*{min-width:0}
+  body.v2 .v2-product .model-thumb-grid{display:flex;overflow-x:auto;gap:8px;padding:2px 2px 8px;scroll-snap-type:x proximity;scrollbar-width:thin}
+  body.v2 .v2-product .model-thumb{flex:0 0 76px;aspect-ratio:1/1;scroll-snap-align:start}
+}
+
+/* O nas: dane firmy w jednym miejscu */
+body.v2 .v2-idcard{margin:28px 0 0;padding:0;max-width:640px;border-top:1px solid var(--rule)}
+body.v2 .v2-idcard>div{display:grid;grid-template-columns:180px 1fr;gap:4px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+body.v2 .v2-idcard dt{font-size:14px;font-weight:600;color:var(--ink-3)}
+body.v2 .v2-idcard dd{margin:0;font-size:16px;color:var(--ink)}
+body.v2 .v2-idcard a{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:560px){body.v2 .v2-idcard>div{grid-template-columns:1fr}}
+
+/* stopka: link do wizytówki Google */
+body.v2 .v2-footer__gbp{display:inline-block;padding:6px 0;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(248,246,241,.4)}
+
+/* telefon: pasek kontaktu nie zasłania otwartego menu ani fokusu na dole ekranu */
+body.v2.menu-open .mobile-cta-bar{display:none}
+@media (max-width:960px){html{scroll-padding-bottom:104px}}
+@media (prefers-reduced-motion:reduce){body.v2 .v2-card__img img,body.v2 .v2-mosaic img{transition:none}}
+body.v2 .v2-product__info>.v2-checks{margin-bottom:6px}
+@media (min-width:961px){body.v2 .v2-product__info>.v2-checks{grid-template-columns:1fr 1fr;column-gap:20px}}
+body.v2 .v2-product__info>.v2-checks+.v2-product__price{border-bottom:0;margin-bottom:6px}
+/* główne zdjęcie modelu to <button> (inline-block): bez pełnej szerokości aspect-ratio nie rezerwował miejsca i treść skakała (CLS ~0,3) */
+body.v2 .model-gallery-main{display:block;width:100%}
+
+/* === Etap 4 (2026-09-29): wymiary ogrodu, filmy, opinie === */
+.rd-wymiary__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px 56px;align-items:start}
+.rd-wymiary__lead{font-size:17px;line-height:1.65;color:var(--ink-2);margin:14px 0 10px;max-width:52ch}
+.rd-wymiary__note{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:0 0 22px;padding:12px 14px;border-left:3px solid var(--honey);background:var(--honey-soft);border-radius:0 10px 10px 0;max-width:56ch}
+.rd-wymiary__form{display:grid;gap:16px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-md);padding:22px}
+.rd-wymiary__pola{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rd-wymiary__form label{display:grid;gap:6px;font-size:14px;font-weight:600;color:var(--ink)}
+.rd-wymiary__form input,.rd-wymiary__form select{font:400 16px/1.4 var(--font-sans);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;min-height:48px;width:100%;box-sizing:border-box}
+.rd-wymiary__form [aria-invalid="true"]{border-color:#A3402A;box-shadow:0 0 0 1px #A3402A}
+.rd-wymiary__form .v2-btn{justify-self:start}
+.rd-wymiary__blad{margin:0;font-size:14.5px;font-weight:600;color:#A3402A}
+.rd-wymiary__wynik:empty{display:none}
+.rd-wynik{border-radius:var(--r-md);padding:18px 20px;margin-bottom:16px;border:1px solid var(--rule);background:var(--white)}
+.rd-wynik--nie_miesci{border-left:4px solid #A3402A}
+.rd-wynik--do_potwierdzenia,.rd-wynik--brak_danych{border-left:4px solid var(--honey)}
+.rd-wynik p{margin:0 0 10px;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+.rd-wynik .rd-wynik__tytul{font-family:var(--font-serif);font-size:19px;font-weight:800;line-height:1.3;color:var(--ink)}
+.rd-wynik .rd-wynik__sub{margin:12px 0 6px;font-weight:600;color:var(--ink)}
+.rd-wynik__znane{margin:0;padding-left:20px;font-size:15px;line-height:1.6;color:var(--ink-2)}
+.rd-rzut{margin:0 0 16px;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-md);padding:12px}
+.rd-rzut__svg{display:block;width:100%;height:auto;max-height:440px}
+.rd-rzut figcaption{font-size:13.5px;line-height:1.5;color:var(--ink-3);margin-top:8px}
+.rd-rzut__ogrod{fill:#E7EDE8;stroke:#18352A;stroke-width:2}
+.rd-rzut__siatka line{stroke:#18352A;stroke-opacity:.12;stroke-width:1}
+.rd-rzut__zestaw{fill:#C8923F;fill-opacity:.28;stroke:#8A5A2E;stroke-width:2}
+.rd-rzut__zestaw--nie_miesci{fill:#A3402A;fill-opacity:.18;stroke:#A3402A;stroke-dasharray:6 4}
+.rd-rzut__etykieta{font:600 13px/1 Inter,sans-serif;fill:#222}
+.rd-rzut__wymiar{font:700 14px/1 Manrope,sans-serif;fill:#18352A}
+.rd-rzut__skala{font:500 12px/1 Inter,sans-serif;fill:#77716A}
+.rd-wynik__cta{display:flex;flex-wrap:wrap;gap:12px}
+.rd-dobor-wymiary{margin:-12px 0 24px;font-size:16px}
+@media (max-width:900px){.rd-wymiary__grid{grid-template-columns:1fr}}
+@media (max-width:560px){.rd-wymiary__pola{grid-template-columns:1fr}.rd-wymiary__form .v2-btn,.rd-wynik__cta .v2-btn{width:100%}}
+
+.rd-filmy__grid{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:28px}
+.rd-film{margin:0}
+.rd-film video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r-md);background:var(--sand)}
+.rd-film figcaption{font-size:14.5px;line-height:1.55;color:var(--ink-2);margin-top:10px}
+.rd-film figcaption strong{color:var(--ink)}
+@media (max-width:640px){.rd-filmy__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+
+.rd-opinie__box{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:24px 48px;align-items:center}
+.rd-opinie p{font-size:17px;line-height:1.65;color:var(--ink-2);margin:14px 0 0;max-width:60ch}
+@media (max-width:800px){.rd-opinie__box{grid-template-columns:1fr}.rd-opinie .v2-btn{width:100%;white-space:normal;text-align:center}}
+
+/* === Etap 5 (2026-09-30) === */
+/* miniatury modeli: widoczny lekki podgląd; pierwszy <img> z pełnym zdjęciem zostaje dla main.js (klik → duże zdjęcie, lightbox),
+   ukryty i z loading=lazy, więc przeglądarka go nie pobiera */
+.model-thumb img.model-thumb__full{display:none}
+.model-thumb img.model-thumb__mini{display:block;width:100%;height:100%;object-fit:cover}
+/* Jak zamówić (/kontakt): 4 kroki w istniejącym układzie .v2-steps */
+.v2-steps.rd-steps--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rd-zamow__cta{margin-top:32px}
+@media (max-width:1000px){.v2-steps.rd-steps--4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.v2-steps.rd-steps--4{grid-template-columns:1fr}}
+.rd-pdf{margin:18px 0 0;font-size:16px}
