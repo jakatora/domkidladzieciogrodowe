@@ -42,7 +42,7 @@
     if (ans.dzieci === '1') { add('standard', 2); add('komfort', 2); }
     if (ans.dzieci === '2') { add('xxl', 3, 'dwie huśtawki i bocianie gniazdo – dzieci nie czekają na swoją kolej'); add('xl', 3, 'dodatkowy taras 180 × 140 cm – więcej miejsca na górze'); add('premium', 1); }
     if (ans.dzieci === '3') { add('xxl', 4, 'dwie huśtawki i bocianie gniazdo – dzieci nie czekają na swoją kolej'); add('xl', 4, 'dodatkowy taras 180 × 140 cm – więcej miejsca na górze'); add('premium', 1); }
-    if (ans.miejsce === 'maly') { add('komfort', 4, 'kompaktowy zestaw, który dobrze pasuje do mniejszego ogrodu'); add('standard', 1); add('premium', -8); add('xl', -1); }
+    if (ans.miejsce === 'maly') { add('premium', -8); }
     if (ans.miejsce === 'sredni') { add('standard', 1); add('xxl', 1); add('xl', 1); add('premium', 1, 'zajmuje 5 × 7 m'); }
     if (ans.miejsce === 'duzy') { add('premium', 3, 'masz miejsce na zestaw 5 × 7 m'); add('xl', 1); add('xxl', 1); }
     ans.wazne.forEach(w => {
