@@ -1162,3 +1162,15 @@ body.v2 .model-gallery-main{display:block;width:100%}
 @media (max-width:1000px){.v2-steps.rd-steps--4{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.v2-steps.rd-steps--4{grid-template-columns:1fr}}
 .rd-pdf{margin:18px 0 0;font-size:16px}
+
+/* rozbudowa 2026-10-02: listy linków (wyposażenie, miasta) i regiony */
+.rd-linklist{columns:2;column-gap:32px}
+.rd-linklist li{break-inside:avoid}
+.rd-linklist a{color:var(--caramel-ink,#8A5A2E);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(138,90,46,.35)}
+.rd-regions{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+.rd-region h3{font-size:17px;font-weight:700;margin:0 0 10px}
+.rd-region .v2-checks{margin:0}
+.rd-region a{color:var(--ink,#222);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule,#DDD5C7)}
+.rd-region a:hover{color:var(--forest,#18352A)}
+@media (max-width:900px){.rd-regions{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.rd-regions{grid-template-columns:1fr}.rd-linklist{columns:1}}
