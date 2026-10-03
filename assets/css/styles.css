@@ -1344,3 +1344,6 @@ body.v2 .v2-guides.rd-guides--7{grid-template-columns:repeat(3,minmax(0,1fr))}
 /* Sekcje oferty pozostają widoczne po przejściu skrótem pod stałym nagłówkiem. */
 body.v2 #dane,body.v2 #opis,body.v2 #pytania{scroll-margin-top:100px}
 body.v2 .rd-product-nav{gap:8px}
+
+/* Telefon: przywrócony pełny kadr wypełniający szerokość pierwszego ekranu. */
+@media(max-width:899px){body.v2 .v2-hero__img{height:min(66vw,460px);max-height:none;object-fit:cover;object-position:30% 50%}}
