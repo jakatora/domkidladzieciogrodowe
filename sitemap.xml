@@ -4,6 +4,11 @@
     <loc>https://domkidladzieciogrodowe.pl/</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/komfort-1478.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/standard-1478.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/xxl-1478.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/xl-1478.webp</image:loc></image:image>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/premium-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-plac-zabaw-dla-dzieci-realizacja-026.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-05.webp</image:loc></image:image>
@@ -55,6 +60,7 @@
     <loc>https://domkidladzieciogrodowe.pl/model-standard</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/standard-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-03.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-standard-04.webp</image:loc></image:image>
@@ -74,6 +80,7 @@
     <loc>https://domkidladzieciogrodowe.pl/model-komfort</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/komfort-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-02.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-komfort-03.webp</image:loc></image:image>
@@ -97,6 +104,7 @@
     <loc>https://domkidladzieciogrodowe.pl/model-xxl</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/xxl-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-02.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xxl-03.webp</image:loc></image:image>
@@ -111,6 +119,7 @@
     <loc>https://domkidladzieciogrodowe.pl/model-xl</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/xl-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xl-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xl-02.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-xl-03.webp</image:loc></image:image>
@@ -135,6 +144,7 @@
     <loc>https://domkidladzieciogrodowe.pl/model-premium</loc>
     <lastmod>2026-10-03</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/modele-ogrod/premium-1478.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-premium-01.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-premium-02.webp</image:loc></image:image>
     <image:image><image:loc>https://domkidladzieciogrodowe.pl/assets/img/drewniany-domek-dla-dzieci-model-premium-03.webp</image:loc></image:image>
