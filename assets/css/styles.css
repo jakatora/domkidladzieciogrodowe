@@ -1299,3 +1299,48 @@ body[data-page="realizacje"] .masonry{columns:3;column-gap:24px}
 body[data-page="realizacje"] .masonry .masonry-item{margin-bottom:24px}
 @media(max-width:1000px){body[data-page="realizacje"] .masonry{columns:2;column-gap:18px}}
 @media(max-width:560px){body[data-page="realizacje"] .masonry{columns:1}}
+
+/* === 2026-10-03: podstrony modeli – 3 cechy nad ceną, dostępność, spokojniejszy panel „co w cenie”, nawigacja po stronie, miniatury na telefonie; główna – 7 kart poradnika === */
+/* 3 najważniejsze cechy modelu (z tabeli danych): kartoniki 3 w rzędzie */
+body.v2 .rd-product-highlights{list-style:none;margin:14px 0 6px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+body.v2 .rd-product-highlights li{display:flex;flex-direction:column;gap:4px;min-height:44px;padding:12px 14px;border:1px solid var(--rule,#DDD5C7);border-radius:var(--r-md,12px);background:#fff}
+body.v2 .rd-product-highlights span{font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--ink-3,#77716A)}
+body.v2 .rd-product-highlights strong{font-size:14.5px;line-height:1.35;font-weight:700;color:var(--ink,#222)}
+body.v2 .v2-product__info>.rd-product-highlights+.v2-product__price{border-bottom:0;margin-bottom:6px}
+@media (max-width:560px){
+  body.v2 .rd-product-highlights{grid-template-columns:1fr;gap:8px}
+  body.v2 .rd-product-highlights li{flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;padding:10px 14px}
+  body.v2 .rd-product-highlights strong{text-align:right}
+}
+/* dostępność pod ceną */
+body.v2 .rd-product-availability{margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--ink-2,#55514A)}
+body.v2 .rd-product-availability::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--forest,#18352A);margin-right:8px;vertical-align:1px}
+/* panel „co jest w cenie”: białe tło, cienka ramka zamiast pełnego wypełnienia */
+body.v2 .v2-product__incl{margin:0 0 18px;padding:14px 16px;border:1px solid var(--rule,#DDD5C7);border-left:3px solid var(--honey,#C8923F);border-radius:10px;background:#fff;font-size:15px;line-height:1.6;color:var(--ink-2,#55514A)}
+body.v2 .v2-product__incl strong{color:var(--ink,#222)}
+/* nawigacja po stronie modelu pod przyciskami: cele min. 44 px */
+body.v2 .rd-product-nav{display:flex;flex-wrap:wrap;gap:4px 2px;margin:0 0 10px}
+body.v2 .rd-product-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:8px;font-size:14.5px;font-weight:600;color:var(--forest,#18352A);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(24,53,42,.3)}
+body.v2 .rd-product-nav a:hover{background:rgba(24,53,42,.05);text-decoration-color:var(--forest,#18352A)}
+/* spójne odstępy w kolumnie informacji */
+body.v2 .v2-product__cta{margin:6px 0 10px}
+body.v2 .v2-product .photo-cta{margin-top:6px}
+/* podpis pod miniaturami – widoczny tylko na telefonie */
+body.v2 .rd-thumbs-hint{display:none;margin:4px 0 0;font-size:13.5px;line-height:1.5;color:var(--ink-3,#77716A)}
+@media (max-width:960px){
+  body.v2 .rd-thumbs-hint{display:block}
+  /* główne zdjęcie: cały kadr bez przycinania i deformacji */
+  body.v2 .v2-product .model-gallery-main img{object-fit:contain;object-position:50% 50%}
+  /* miniatury: jeden poziomy pasek przewijany (wszystkie przyciski zostają w HTML); padding, by obrys fokusu nie był obcięty */
+  body.v2 .v2-product .model-thumb-grid{display:grid;grid-auto-flow:column;grid-auto-columns:72px;grid-template-columns:none;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding:6px 6px 10px;margin:0 -6px}
+  body.v2 .v2-product .model-thumb{aspect-ratio:1/1;scroll-snap-align:start}
+}
+/* strona główna: 7 kart poradnika – 3 / 2 / 1 kolumny */
+body.v2 .v2-guides.rd-guides--7{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){body.v2 .v2-guides.rd-guides--7{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){body.v2 .v2-guides.rd-guides--7{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){body.v2 .v2-guides a,body.v2 .model-gallery-main img{transition:none}}
+
+/* Sekcje oferty pozostają widoczne po przejściu skrótem pod stałym nagłówkiem. */
+body.v2 #dane,body.v2 #opis,body.v2 #pytania{scroll-margin-top:100px}
+body.v2 .rd-product-nav{gap:8px}
