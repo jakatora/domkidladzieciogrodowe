@@ -1193,3 +1193,109 @@ body.v2 .rd-quick__links span{font-size:13px;line-height:1.4;color:var(--ink-2,#
 /* Nagłówki i cel klawiatury widoczne pod przyklejonym menu. */
 main[id],main [id]{scroll-margin-top:90px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* === 2026-10-03: estetyka – karty 3:2, hero na telefonie, 3 kroki, realizacje, porównanie, CTA WhatsApp === */
+/* karty modeli (wszystkie strony): jednakowy kadr 3:2, całe wyposażenie widoczne (contain) na neutralnym tle */
+body.v2 .v2-cards .v2-card{height:100%}
+body.v2 .v2-cards .v2-card__img{aspect-ratio:3/2;background:var(--sand,#EDE7DC)}
+body.v2 .v2-cards .v2-card__img img{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 50%}
+body.v2 .v2-cards>.v2-card:nth-child(-n+2) .v2-card__img,body.v2 .v2-cards>.v2-card:nth-child(5):last-child .v2-card__img{aspect-ratio:3/2}
+/* nagłówek karty: nazwa po lewej, większa cena i „Montaż w cenie” po prawej */
+body.v2 .v2-card__top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px 16px;margin-bottom:10px}
+body.v2 .v2-card__top h3,body.v2 .v2-card__top h2,body.v2 .v2-cards>.v2-card:nth-child(-n+2) h3{font-size:22px;line-height:1.2;margin:0}
+body.v2 .v2-card__cena{display:flex;flex-direction:column;align-items:flex-end;flex:0 0 auto;text-align:right}
+body.v2 .v2-card__top .v2-price{background:none;padding:0;border-radius:0;font-family:var(--font-serif);font-size:24px;line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--ink,#222)}
+body.v2 .v2-card__incl{display:block;margin-top:3px;font:600 12.5px/1.3 var(--font-sans);color:var(--forest,#18352A);white-space:nowrap}
+/* przyciski kart u dołu, cel dotyku min. 44 px */
+body.v2 .v2-card__actions{margin-top:auto;padding-top:4px}
+body.v2 .v2-card__actions .v2-btn{height:44px;min-height:44px}
+body.v2 .v2-card__actions .v2-link{display:inline-flex;align-items:center;min-height:44px}
+/* siatka kart bez dziur dla 2, 3, 4 i 5 kart */
+@media (min-width:1100px){
+  body.v2 .v2-cards>.v2-card:nth-child(-n+2){grid-column:span 2}
+  body.v2 .v2-cards>.v2-card:first-child:nth-last-child(5),body.v2 .v2-cards>.v2-card:nth-child(2):nth-last-child(4),
+  body.v2 .v2-cards>.v2-card:first-child:nth-last-child(4),body.v2 .v2-cards>.v2-card:nth-child(2):nth-last-child(3),body.v2 .v2-cards>.v2-card:nth-child(3):nth-last-child(2),body.v2 .v2-cards>.v2-card:nth-child(4):last-child,
+  body.v2 .v2-cards>.v2-card:first-child:nth-last-child(2),body.v2 .v2-cards>.v2-card:nth-child(2):last-child{grid-column:span 3}
+}
+@media (min-width:641px) and (max-width:1099px){
+  body.v2 .v2-cards>.v2-card:nth-child(5):last-child{grid-column:1/-1;width:calc(50% - 14px);justify-self:center}
+}
+
+/* hero na telefonie i tablecie: cały domek (contain) do 32 % wysokości ekranu, zwarty tekst, cena i CTA szybko widoczne */
+@media (max-width:899px){
+  body.v2 .v2-hero__img{height:auto;max-height:32vh;max-height:32svh;object-fit:contain;object-position:50% 50%;background:var(--forest-2,#22473A)}
+  body.v2 .v2-hero__body{padding:18px 0 26px}
+  body.v2 .v2-hero__kicker{margin:0 0 10px;font-size:13.5px}
+  body.v2 .v2-hero h1{font-size:clamp(1.7rem,7.7vw,2.4rem);line-height:1.1;margin:0 0 12px}
+  body.v2 .v2-hero__lead{font-size:16px;line-height:1.5;margin:0 0 16px}
+  body.v2 .v2-hero__cta{gap:10px;margin-bottom:16px}
+  body.v2 .v2-hero__cta .v2-btn{flex:1 1 100%;height:50px}
+  body.v2 .v2-hero__meta{font-size:13.5px;gap:6px 14px}
+}
+
+/* pasek przy modelach: 3 przejrzyste przyciski */
+body.v2 .rd-quick--3{grid-template-columns:1fr;padding:0;border:0;background:none;margin:-8px 0 32px}
+body.v2 .rd-quick--3 .rd-quick__links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+body.v2 .rd-quick--3 .rd-quick__links a{min-width:0;min-height:44px;justify-content:center;padding:12px 16px}
+@media (max-width:640px){body.v2 .rd-quick--3 .rd-quick__links{grid-template-columns:1fr;gap:8px}}
+
+/* zamówienie w 3 krokach */
+body.v2 .v2-steps.rd-steps--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:800px){body.v2 .v2-steps.rd-steps--3{grid-template-columns:1fr}}
+
+/* realizacje na stronie głównej: spokojna siatka, dwie równe kolumny, wszystkie zdjęcia widoczne */
+body.v2 .v2-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:16px}
+body.v2 .v2-mosaic .v2-tile{display:block;width:100%}
+body.v2 .v2-mosaic .v2-tile:first-child,body.v2 .v2-mosaic .v2-tile:nth-child(4),body.v2 .v2-mosaic .v2-tile:nth-child(7){grid-column:auto;grid-row:auto}
+body.v2 .v2-mosaic img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+@media (min-width:901px){
+  body.v2 .v2-mosaic .v2-tile:nth-child(7){grid-column:1/-1}
+  body.v2 .v2-mosaic .v2-tile:nth-child(7) img{aspect-ratio:2/1}
+}
+@media (max-width:900px){
+  body.v2 .v2-mosaic{gap:10px}
+  body.v2 .v2-mosaic .v2-tile:first-child{grid-column:1/-1}
+  body.v2 .v2-mosaic .v2-tile:nth-child(n+6){display:block}
+}
+@media (max-width:560px){body.v2 .v2-mosaic{grid-template-columns:1fr}body.v2 .v2-mosaic .v2-tile:first-child{grid-column:auto}}
+
+/* porównanie: kafelki modeli nad tabelą, wyróżnione komórki różnic, tabela przewijana w bok na telefonie */
+body.v2 .rd-kafelki{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+body.v2 .rd-kafelki a{display:flex;flex-direction:column;gap:4px;height:100%;min-height:44px;padding:16px 16px 18px;border:1px solid var(--rule,#DDD5C7);border-radius:var(--r-md,12px);background:#fff;color:var(--ink,#222);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+body.v2 .rd-kafelki a:hover{border-color:var(--caramel,#B97845);box-shadow:0 2px 10px rgba(34,34,34,.06)}
+body.v2 .rd-kafelki__model{font:800 19px/1.2 var(--font-serif);color:var(--forest,#18352A)}
+body.v2 .rd-kafelki__cena{font:800 24px/1.1 var(--font-serif);letter-spacing:-.02em;color:var(--ink,#222)}
+body.v2 .rd-kafelki__roznica{margin-top:6px;font-size:14px;line-height:1.45;color:var(--ink-2,#55514A)}
+body.v2 .rd-kafelki__roznica small{display:block;font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--caramel-ink,#8A5A2E)}
+body.v2 .rd-kafelki__note{margin:0 0 28px;font-size:14.5px;color:var(--ink-3,#77716A)}
+@media (max-width:1000px){body.v2 .rd-kafelki{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){body.v2 .rd-kafelki{grid-template-columns:1fr 1fr;gap:10px}body.v2 .rd-kafelki li:last-child{grid-column:1/-1}}
+body.v2 .compare-table tbody tr:not(.is-current) td.rd-diff,body.v2 .compare-table tbody tr:not(.is-current):hover td.rd-diff{background:var(--honey-soft,#F5E9D6);color:var(--ink,#222);font-weight:600}
+body.v2 .rd-tabela__hint{display:none;margin:0 0 10px;font-size:14px;color:var(--ink-3,#77716A)}
+body.v2 .rd-tabela:focus-visible{outline:3px solid var(--caramel,#B97845);outline-offset:3px}
+@media (max-width:1000px){
+  body.v2 .rd-tabela__hint{display:block}
+  body.v2 .rd-tabela{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;border:1px solid var(--rule,#DDD5C7);border-radius:var(--r-md,12px);background:#fff}
+  body.v2 .rd-tabela .compare-table{display:table;width:auto;min-width:720px;border:0;border-radius:0;box-shadow:none;font-size:14px}
+  body.v2 .rd-tabela .compare-table thead{display:table-header-group}
+  body.v2 .rd-tabela .compare-table tbody{display:table-row-group}
+  body.v2 .rd-tabela .compare-table tr{display:table-row;position:static;box-shadow:none}
+  body.v2 .rd-tabela .compare-table th,body.v2 .rd-tabela .compare-table td{display:table-cell;width:auto;padding:12px 14px;border-bottom:1px solid var(--rule,#DDD5C7);line-height:1.45}
+  body.v2 .rd-tabela .compare-table tbody th{padding:12px 14px;font-size:16px;white-space:nowrap;position:sticky;left:0;z-index:1;background:#fff;box-shadow:1px 0 0 var(--rule,#DDD5C7)}
+  body.v2 .rd-tabela .compare-table td::before{content:none}
+  body.v2 .rd-tabela .compare-table tbody th a::before,body.v2 .rd-tabela .compare-table tbody th a::after{content:none;position:static}
+  body.v2 .rd-tabela .compare-table tbody tr:last-child th,body.v2 .rd-tabela .compare-table tbody tr:last-child td{border-bottom:0}
+}
+
+/* kontakt i końcowe CTA: zachęta do zdjęcia ogrodu, mocny przycisk WhatsApp */
+body.v2 .v2-final h2{max-width:22ch}
+body.v2 .v2-btn.rd-wa{background:#147A3A;color:#fff;border-color:transparent}
+body.v2 .v2-btn.rd-wa:hover{background:#10632F;color:#fff}
+body.v2 .rd-wa-hint{font-size:16px;line-height:1.6;margin:0 0 18px}
+body.v2 .rd-wa-hint strong{display:block;font-family:var(--font-serif);font-size:19px;font-weight:800;color:var(--paper,#F8F6F1);margin-bottom:4px}
+
+/* Realizacje: większe zdjęcia bez przycinania oryginalnych kadrów. */
+body[data-page="realizacje"] .masonry{columns:3;column-gap:24px}
+body[data-page="realizacje"] .masonry .masonry-item{margin-bottom:24px}
+@media(max-width:1000px){body[data-page="realizacje"] .masonry{columns:2;column-gap:18px}}
+@media(max-width:560px){body[data-page="realizacje"] .masonry{columns:1}}
