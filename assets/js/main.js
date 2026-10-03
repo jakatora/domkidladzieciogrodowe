@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const thumbsEl = modal?.querySelector('.lightbox-thumbs');
   let currentGroup = [];
   let currentIndex = 0;
+  let lightboxRenderId = 0;
   let touchStartX = null;
   let touchStartY = null;
 
@@ -126,6 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
       itemsByGroup[group] = thumbs;
     }
   });
+
+  function setModelImage(target, source) {
+    // A previous responsive source must not override the newly selected photo.
+    ['srcset', 'sizes'].forEach(attribute => {
+      const value = source.getAttribute(attribute);
+      if (value) target.setAttribute(attribute, value);
+      else target.removeAttribute(attribute);
+    });
+    target.src = source.src;
+    target.alt = source.alt || '';
+  }
 
   function getItemData(item) {
     const img = item?.querySelector('img');
@@ -167,8 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!item || !modalImg) return;
     const { src, alt } = getItemData(item);
     modalImg.classList.add('is-changing');
+    const renderId = ++lightboxRenderId;
     const preload = new Image();
     preload.onload = () => {
+      if (renderId !== lightboxRenderId) return;
       modalImg.src = src;
       modalImg.alt = alt || '';
       counterEl && (counterEl.textContent = `${currentIndex + 1} / ${currentGroup.length}`);
@@ -211,8 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!block || !mainImg || !sourceImg) return;
 
-    mainImg.src = sourceImg.currentSrc || sourceImg.src;
-    mainImg.alt = sourceImg.alt || '';
+    setModelImage(mainImg, sourceImg);
     if (count) count.textContent = `${currentIndex + 1} / ${thumbs.length || currentGroup.length}`;
     if (trigger) trigger.setAttribute('data-index', currentIndex);
     thumbs.forEach((thumb, idx) => thumb.classList.toggle('active', idx === currentIndex));
@@ -220,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeLightbox() {
     syncModelGalleryState();
+    lightboxRenderId++;
     modal?.classList.remove('open');
     modal?.setAttribute('aria-hidden', 'true');
     body.classList.remove('has-modal');
@@ -277,17 +291,17 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         const img = thumb.querySelector('img');
         if (!img || !mainImg) return;
-        if (mainImg.src === img.src) return;
+        if (mainImg.src === img.src) {
+          mainImg.classList.remove('is-swapping');
+          return;
+        }
         mainImg.classList.add('is-swapping');
-        setTimeout(() => {
-          mainImg.src = img.src;
-          mainImg.alt = img.alt;
-          if (count) count.textContent = `${idx + 1} / ${thumbs.length}`;
-          trigger?.setAttribute('data-index', idx);
-          thumbs.forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
-          requestAnimationFrame(() => mainImg.classList.remove('is-swapping'));
-        }, 130);
+        setModelImage(mainImg, img);
+        if (count) count.textContent = `${idx + 1} / ${thumbs.length}`;
+        trigger?.setAttribute('data-index', idx);
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        requestAnimationFrame(() => mainImg.classList.remove('is-swapping'));
       });
     });
   });
