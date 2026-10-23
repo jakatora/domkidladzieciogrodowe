@@ -16,7 +16,7 @@ let checked = 0;
 for (const model of ['standard', 'komfort', 'xxl', 'xl', 'premium']) {
   const html = fs.readFileSync(path.join(root, `model-${model}.html`), 'utf8');
   const main = image(html.match(new RegExp(`<img[^>]*id="main-${model}"[^>]*>`))[0]);
-  const photos = [...html.matchAll(/<img class="model-thumb__full"[^>]*>/g)].map(m => image(m[0]));
+  const photos = [...html.matchAll(/<img\b[^>]*\bclass="[^"]*\bmodel-thumb__full\b[^"]*"[^>]*>/g)].map(m => image(m[0]));
   assert(photos.length > 1);
   // Select every photo and return to the responsive first one: no stale srcset.
   for (const photo of [...photos, photos[0]]) {
