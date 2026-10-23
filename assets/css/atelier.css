@@ -70,6 +70,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .v2-footer {padding:60px 0 26px;font-size:14px;background:var(--forest)}
 .v2-footer h2,.rd-home .v2-footer h2 {font:500 14px/1.5 var(--font-sans);letter-spacing:0;margin:0 0 14px;color:var(--paper)}
 .v2-footer__bottom {font-size:12px}
+.v2-footer__bottom {color:#d7dfd5}
+.v2-footer p a,.v2-footer__bottom a {text-decoration:underline;text-underline-offset:3px}
 .v2-footer__grid {gap:30px}
 .v2-footer p {font-size:13px;line-height:1.9}
 .v2-footer li a {display:inline-block;min-height:32px;padding:4px 0}
@@ -118,6 +120,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .rd-faq details p {max-width:780px;font-size:15px;line-height:1.85;color:var(--ink-2);padding:15px 0 4px}
 .rd-home .at-story-intro>p,.rd-home .at-step p {font-size:14px;line-height:1.85}
 .rd-home .at-step h3 {font-family:var(--font-sans);font-size:16px;font-weight:500}
+.rd-home .at-step>span {color:#61735a}
 .rd-home .at-contact p {font-size:14px}
 .rd-home .at-contact h2 {color:var(--paper)}
 .will-reveal {opacity:1;transform:none;transition:none}

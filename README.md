@@ -14,7 +14,9 @@ node --test tests/analytics.cjs tests/forms.cjs
 ```
 
 Testy analityki używają wbudowanego `node:sqlite`. Skrypt budowania tworzy `dist/`
-wyłącznie z plikami publicznymi. Cloudflare Pages ma ustawienia:
+wyłącznie z plikami publicznymi. Zestawy CSS łączy w jeden plik o nazwie
+zależnej od treści; kolejność reguł pozostaje zachowana. Oryginalne pliki CSS
+pozostają dostępne pod dotychczasowymi adresami. Cloudflare Pages ma ustawienia:
 
 - Build command: `node scripts/build.mjs`
 - Build output directory: `dist`
