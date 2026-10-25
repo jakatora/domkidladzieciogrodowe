@@ -66,6 +66,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .rd-trust-note {border-left:2px solid var(--caramel);padding:12px 18px;margin:20px 0;background:var(--white);font-size:14px;line-height:1.8}
 .rd-quick__links a {border-radius:7px;box-shadow:none}
 .v2-table,.rd-table-scroll {max-width:100%;overflow-x:auto}
+.v2-table-wrap {max-width:100%;overflow-x:auto;margin:24px 0}
+.v2-table-wrap table {width:100%;border-collapse:collapse;min-width:580px}
+.v2-table-wrap caption {text-align:left;font-weight:500;margin-bottom:12px}
+.v2-table-wrap th,.v2-table-wrap td {padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+.v2-table-wrap thead {background:var(--sand)}
+.rd-home .at-choices {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.rd-home .at-choice {display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:28px;border:1px solid var(--rule);border-radius:9px;background:var(--white)}
+.rd-home .at-choice:hover {border-color:var(--forest);background:var(--forest-tint)}
+.rd-home .at-choice>span {font-size:11px;letter-spacing:.08em;color:var(--ink-2)}
+.rd-home .at-choice h3 {font:400 29px/1.25 var(--font-serif);letter-spacing:-.025em}
+.rd-home .at-choice p {font-size:16px;line-height:1.75;color:var(--ink-2);max-width:50ch}
+.rd-home .at-choice strong {margin-top:auto;font-size:13px;font-weight:500;line-height:1.65;text-decoration:underline;text-underline-offset:4px;color:var(--forest)}
+.rd-home .rd-faq p a {text-decoration:underline;text-underline-offset:3px}
+.rd-product-links {font-size:14px;line-height:1.8}
+@media(max-width:640px) {
+  .rd-home .at-choices {grid-template-columns:minmax(0,1fr)}
+  .rd-home .at-choice {padding:24px}
+  .rd-home .at-choice h3 {font-size:27px}
+}
 .v2-final h2,.v2-footer h2 {color:var(--paper)}
 .v2-footer {padding:60px 0 26px;font-size:14px;background:var(--forest)}
 .v2-footer h2,.rd-home .v2-footer h2 {font:500 14px/1.5 var(--font-sans);letter-spacing:0;margin:0 0 14px;color:var(--paper)}

@@ -69,3 +69,33 @@ W Cloudflare Pages → Deployments wybierz poprzednie udane wdrożenie productio
 i użyj Rollback. Następnie wykonaj `git revert` odpowiedniego commita na `main`,
 aby kolejne wdrożenie zachowało cofnięty stan. Wyłączenie klienta pomiarowego
 nie wymaga usuwania bazy. Klucze API są poza repozytorium i katalogiem `dist`.
+
+## Utrzymanie SEO — 25 października 2026
+
+Strona główna opisuje drewniane domki ogrodowe dla dzieci z montażem. `/modele`
+jest katalogiem pięciu produktów, `/domek-dla-dzieci-ze-zjezdzalnia` porównuje
+zestawy ze zjeżdżalnią, a `/plac-zabaw-z-hustawka` wyjaśnia różnice w huśtawkach.
+Piaskownice i wspinaczka mają własne, istniejące strony wyposażenia. Cennik,
+porównanie i poradnik wyboru odpowiadają na odrębne pytania przed zakupem.
+
+Priorytety wynikają z zapisanych danych Search Console z 23.10.2026 (dla okresu
+15.09–21.10.2026) oraz polskich podpowiedzi Google sprawdzonych 25.10.2026.
+Najwięcej wyświetleń w zapisanej próbce miało „domek dla dzieci” (1396).
+Podpowiedzi obejmowały warianty „do ogrodu”, „drewniany”, „ogrodowy” oraz
+„ze zjeżdżalnią”. Podpowiedzi nie są pomiarem miesięcznych wolumenów.
+
+Przy kolejnych aktualizacjach:
+
+- Zachowuj publiczne adresy i canonical. Nie twórz kopii oferty pod każdą odmianę
+  frazy ani kolejnych stron miast bez użytecznych, potwierdzonych informacji.
+- Aktualizuj razem widoczne wyposażenie, ceny i dane Product/Offer. Każda cena
+  obejmuje montaż, a transport jest wyceniany indywidualnie.
+- Nie dopisuj niepotwierdzonych wymiarów, terminów, wieku, obciążeń, certyfikatów
+  ani realizacji. Oddzielaj obrys konstrukcji od wymaganej przestrzeni użytkowania.
+- Utrzymuj zgodność plików `modele.html` i `modele/index.html` (analogicznie
+  realizacje, kontakt, poradnik, wykonanie). Produkcyjne przekierowania wybierają
+  jeden adres; kopie `pages.dev` otrzymują hostowo ograniczony `noindex`.
+- Zmieniaj `lastmod` w mapie i datę artykułu po rzeczywistej zmianie jego treści.
+- Efekty oceniaj w Search Console według zapytania i strony, z uwzględnieniem
+  kraju, urządzenia i sezonowości. Zapis z 23.10 jest punktem odniesienia, a nie
+  wynikiem tego wdrożenia. Dobry wynik testu SEO nie potwierdza wzrostu pozycji.

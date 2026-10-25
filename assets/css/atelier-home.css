@@ -35,7 +35,7 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 .rd-home .at-eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:600;display:flex;align-items:center;gap:10px;color:var(--green)}
 .rd-home .at-eyebrow:before{content:"";display:block;width:24px;height:1px;background:var(--orange)}
 .rd-home h1,.rd-home h2,.rd-home h3,.rd-home p{margin:0}
-.rd-home h1{font:400 clamp(49px,5.05vw,73px)/1.08 var(--serif);letter-spacing:-.055em;margin:22px 0 23px}
+.rd-home h1{font:400 clamp(42px,4.5vw,66px)/1.08 var(--serif);letter-spacing:-.045em;margin:22px 0 23px}
 .rd-home h1 em{font-weight:400;color:var(--green)}
 .rd-home .at-hero-copy>p{color:var(--muted);font-size:14px;line-height:1.85;max-width:360px}
 .rd-home .at-hero-actions{display:flex;align-items:center;gap:23px;margin-top:29px;flex-wrap:wrap}
@@ -135,7 +135,7 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 .rd-home .at-head-actions .at-btn{font-size:10px;padding:10px 12px;min-height:44px}
 .rd-home .at-hero{grid-template-columns:1fr;padding-top:25px;padding-bottom:25px;gap:27px}
 .rd-home .at-eyebrow{font-size:9px;letter-spacing:.12em}
-.rd-home h1{font-size:53px;line-height:1.06;margin:17px 0 19px;letter-spacing:-.05em}
+.rd-home h1{font-size:clamp(38px,8.5vw,49px);line-height:1.08;margin:17px 0 19px;letter-spacing:-.05em}
 .rd-home .at-hero-copy>p{font-size:13px;max-width:350px;line-height:1.8}
 .rd-home .at-hero-actions{margin-top:22px;gap:20px}
 .rd-home .at-hero-actions .at-btn{font-size:12px;min-height:47px;padding:12px 17px;gap:12px}
@@ -186,7 +186,7 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 .rd-home .at-concept-note{font-size:9px}
 .rd-home .at-all-prices{font-size:11px}
 .rd-home .at-product-grid .at-product-help{min-height:200px}}
-@media (max-width:365px){.rd-home h1{font-size:47px}
+@media (max-width:365px){.rd-home h1{font-size:36px}
 .rd-home .at-head-actions .at-btn{font-size:9px}
 .rd-home .at-hero-actions{gap:12px}
 .rd-home .at-hero-actions .at-btn{padding:12px 13px}

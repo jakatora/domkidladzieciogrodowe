@@ -7,3 +7,10 @@
 /api/*
   X-Robots-Tag: noindex
   Cache-Control: no-store
+
+# Canonical production lives on the custom domain; exclude Pages preview copies.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
