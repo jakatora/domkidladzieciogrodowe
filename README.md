@@ -80,9 +80,10 @@ porównanie i poradnik wyboru odpowiadają na odrębne pytania przed zakupem.
 
 Priorytety wynikają z zapisanych danych Search Console z 23.10.2026 (dla okresu
 15.09–21.10.2026) oraz polskich podpowiedzi Google sprawdzonych 25.10.2026.
-Najwięcej wyświetleń w zapisanej próbce miało „domek dla dzieci” (1396).
-Podpowiedzi obejmowały warianty „do ogrodu”, „drewniany”, „ogrodowy” oraz
-„ze zjeżdżalnią”. Podpowiedzi nie są pomiarem miesięcznych wolumenów.
+Analiza obejmowała warianty „domek dla dzieci”, „do ogrodu”, „drewniany”,
+„ogrodowy”, „ze zjeżdżalnią” oraz zestawy z huśtawką i piaskownicą. Podpowiedzi
+nie są pomiarem miesięcznych wolumenów. Szczegółowe raporty skuteczności
+przechowujemy poza publicznym repozytorium.
 
 Przy kolejnych aktualizacjach:
 
