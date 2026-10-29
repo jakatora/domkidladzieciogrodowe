@@ -201,3 +201,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   html {scroll-behavior:auto}
   *,*:before,*:after {animation:none!important;transition:none!important}
 }
+
+/* Shortcuts keep the models and practical buying details easy to reach. */
+.rd-section-links {display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:24px}
+.rd-equipment-intro {padding-bottom:36px}
+.rd-section-links .v2-link {line-height:1.6}
+#gdzie-h {font-weight:400;line-height:1.16}

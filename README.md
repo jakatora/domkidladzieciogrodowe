@@ -100,3 +100,17 @@ Przy kolejnych aktualizacjach:
 - Efekty oceniaj w Search Console według zapytania i strony, z uwzględnieniem
   kraju, urządzenia i sezonowości. Zapis z 23.10 jest punktem odniesienia, a nie
   wynikiem tego wdrożenia. Dobry wynik testu SEO nie potwierdza wzrostu pozycji.
+
+### Aktualizacja ogólnopolska — 29 października 2026
+
+Strony wyposażenia pokazują modele i ceny przed częścią poradnikową. Zachowano
+dotychczasowe adresy, kotwice i kolejność modeli zgodną z ItemList. Pierwsze
+zdjęcie modelu ma priorytet ładowania, a fotografia w dalszej części jest leniwa.
+`/gdzie-dzialamy` opisuje dostawę, wycenę transportu, montaż i przygotowanie
+zamówienia w całej Polsce; lista miast jest sekcją pomocniczą, nie listą oddziałów.
+Linki do tych warunków znajdują się przy cenach produktów, w katalogu i cenniku.
+
+Porównania opisują potwierdzone wyposażenie. Nie wyciągaj wniosków o liczbie
+jednoczesnych użytkowników, wieku ani nośności z liczby huśtawek, wielkości
+tarasu lub przekroju belki. FAQ w danych strukturalnych musi odpowiadać treści
+widocznej na stronie; nie zakładamy wyświetlania rozszerzonych FAQ w Google.
