@@ -114,3 +114,30 @@ Porównania opisują potwierdzone wyposażenie. Nie wyciągaj wniosków o liczbi
 jednoczesnych użytkowników, wieku ani nośności z liczby huśtawek, wielkości
 tarasu lub przekroju belki. FAQ w danych strukturalnych musi odpowiadać treści
 widocznej na stronie; nie zakładamy wyświetlania rozszerzonych FAQ w Google.
+
+
+### Mapa fraz ogólnopolskich — 2 listopada 2026
+
+Priorytety wskazane przez właściciela grupujemy według intencji klienta:
+
+| Grupa | Główny adres |
+| --- | --- |
+| domki dla dzieci; domek dla dzieci do ogrodu; domek dla dzieci drewniany do ogrodu | `/` |
+| plac zabaw do ogrodu; plac zabaw drewniany do ogrodu | `/modele` |
+| plac zabaw drewniany do ogrodu z huśtawką; domek dla dzieci z huśtawką do ogrodu | `/plac-zabaw-z-hustawka` |
+| plac zabaw drewniany do ogrodu ze zjeżdżalnią; domek dla dzieci ze zjeżdżalnią do ogrodu | `/domek-dla-dzieci-ze-zjezdzalnia` |
+| plac zabaw do ogrodu z małpim gajem; domek dla dzieci z małpim gajem do ogrodu | `/plac-zabaw-ze-scianka-wspinaczkowa#malpi-gaj` — osobna oferta do zapytania |
+
+Używamy naturalnych odmian i szyku słów. Katalog opisuje wybór całego placu
+zabaw, a strony wyposażenia prowadzą do konkretnych modeli. Nie zakładamy,
+że Google zawsze wybierze wskazany adres. Nie kopiujemy treści na nowe URL-e.
+
+Użytkownik potwierdził 2026-11-02, że dodatkowy małpi gaj jest osobnym produktem.
+Nie utożsamiaj go z istniejącą ścianką, siatką lub drabinką. Obecna sekcja
+potwierdza tylko osobną ofertę i zaprasza do zapytania. Do jej rozbudowy potrzebne
+są zdjęcia rzeczywistego produktu, lista wyposażenia,
+potwierdzone wymiary i przestrzeń użytkowania, cena lub zasada indywidualnej
+wyceny oraz informacja, czy i z którymi domkami może być zestawiony.
+
+Dane Search Console pobrane 2026-11-02 kończą się 2026-10-31. To punkt odniesienia,
+nie wynik obecnego wdrożenia; zachowujemy eksport prywatnie poza repozytorium.
